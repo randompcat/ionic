@@ -1,0 +1,8 @@
+{
+  "name": "BLE beacon",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "5ad03cc7"
+}

@@ -1,0 +1,37 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Devices
+	</ion-title>
+	
+	  <ion-button (click)="Scan()" slot="end">
+		<ion-icon name="Bluetooth"></ion-icon>
+		<p>Scan</p>
+	  </ion-button>
+	  
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+	<ion-list>
+		<ion-card-content ion-item *ngFor="let device of devices">
+			<p>{{device.name || 'Unnamed'}}</p>
+			<p>{{device.id}}</p>
+			<p> RSSI: {{device.rssi}}</p>
+		</ion-card-content>
+	</ion-list>
+
+<!--
+	<ion-card>
+		<ion-img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0UiLi1A2fL3Y5BBRhVOxuJClaNwaNpfYI_A&usqp=CAU"></ion-img>
+			<ion-card-header>
+				<ion-card-title>BLE Name</ion-card-title>
+				<ion-card-content>
+					ID:xxxx:xxxx:xxxx:xxxx
+					<p>RSSI:xxx</p>
+				</ion-card-content>
+			</ion-card-header>
+	</ion-card>
+-->
+
+</ion-content>

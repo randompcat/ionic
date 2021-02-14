@@ -1,0 +1,63 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Setting
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+	<ion-list>
+		<ion-list-header>
+			Add New Device
+		</ion-list-header>
+	</ion-list>
+
+	<ion-list>
+		<ion-item>
+			<ion-label position="floating">Device Name</ion-label>
+			<ion-input placeholder="Name"></ion-input> <!-- value={deviceName} placeholder="Device Name" onIonChange={e => setDeviceName(e.detail.value!)} -->
+		</ion-item>
+		<ion-item>
+			<ion-label position="floating">ID</ion-label>
+			<ion-input placeholder="01:23:45:67:89:AB:CD"></ion-input> <!-- value={ID} placeholder="ID" onIonChange={e => setID(e.detail.value!)} -->
+		</ion-item>
+	</ion-list>
+	
+	<ion-list>
+		<ion-radio-group> <!-- value={selected} onIonChange={e => setSelected(e.detail.value)} -->
+			<ion-list-header>
+				<ion-label>Beacon Type</ion-label>
+			</ion-list-header>
+			
+			
+			<ion-item>
+				<ion-label> 1 </ion-label>
+				<ion-radio value="1"></ion-radio>
+			</ion-item>
+			<ion-item>
+				<ion-label> 2 </ion-label>
+				<ion-radio value="2"></ion-radio>
+			</ion-item>
+			<ion-item>
+				<ion-label> a </ion-label>
+				<ion-radio value="a"></ion-radio>
+			</ion-item>
+			<ion-item>
+				<ion-label> b </ion-label>
+				<ion-radio value="b"></ion-radio>
+			</ion-item>
+			
+		</ion-radio-group>
+		<ion-item-divider>Confirmation</ion-item-divider>
+		<!-- <ion-item>{"Device " + deviceName + " with ID " + ID + " is type" + selected + " beacon."}</IonItem>
+		-->
+	</ion-list>
+	
+
+	<ion-button>
+		Save
+		<ion-icon slot="end" name="bookmark"></ion-icon>
+	</ion-button>
+
+</ion-content>
